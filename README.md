@@ -39,8 +39,8 @@ When you click a link, Vigie opens first and investigates it while the page stay
 Vigie does not train its own model. The verdict comes from a commercial language model, **GPT-4.1 mini** (OpenAI), with **Gemini 3.5 Flash** (Google) as a backup. The work in this repository is everything around the model:
 
 - the investigation pipeline and its tools, so the model reasons on measured facts rather than on its memory;
-- the case file format, about 1,800 tokens, which keeps one check near US$0.001;
-- the rules that can only block, a cost ceiling of US$0.01 per check and US$3 per day;
+- the case file format, a compact summary of about 1,800 tokens that keeps each check short;
+- the rules that can only block, and limits on how long and how far each check can go;
 - adapters for nine AI providers, so a model can be swapped in one line of configuration.
 
 Page text is treated as untrusted data and is never followed as instructions.
@@ -54,7 +54,7 @@ Tested on 14 October 2026 on 120 links: 60 live phishing links from the OpenPhis
 | Phishing links blocked | **53 / 60** (88%) | **59 / 60** (98%) |
 | Real sites allowed to open | **57 / 60** (95%) | **57 / 60** (95%) |
 
-One check costs **US$0.00076** on average, and the AI answers in **3.2 seconds** on average. The whole test cost US$0.09.
+The AI answers in **3.2 seconds** on average.
 
 The three real sites wrongly stopped were Bank of Africa, Airtel Africa (blocked) and Binance (unverifiable): this is the main thing to improve, and the user can report any verdict as a mistake. The script is `scripts/evaluate.py`; for phishing links it hides the blocklist results from the model, so the first column measures what the AI catches on its own.
 
