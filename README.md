@@ -6,7 +6,7 @@
 
 > **Video (coming soon):** a 90-second motion design explaining Vigie will be linked here.
 >
-> **Live demo (coming soon):** `https://vigie.assimti-charles.tech`
+> **Live demo:** [vigie.assimti-charles.tech](https://vigie.assimti-charles.tech)
 
 ---
 
@@ -72,7 +72,7 @@ The three real sites wrongly stopped were Bank of Africa, Airtel Africa (blocked
 
 **Windows.** Download `VigieSetup.exe` from the [latest release](../../releases/latest), check its SHA-256 against the value published with the release, and run it. No administrator rights are needed. The installer is not code-signed yet, so Windows SmartScreen shows a warning first (“More info”, then “Run anyway”). `Vigie.exe --uninstall` removes everything.
 
-**Web.** The public demo will be at `https://vigie.assimti-charles.tech`.
+**Web.** Open [vigie.assimti-charles.tech/check](https://vigie.assimti-charles.tech/check) and paste a link.
 
 **Run the server yourself** (Python 3.13):
 
