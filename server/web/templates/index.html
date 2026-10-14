@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f6fb">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Paste a link and Vigie’s AI checks it before it opens.">
+  <title>Vigie: check a link before it opens</title>
+  <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/static/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/static/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/site.css?v=20261014e">
+  <script type="module" src="/static/js/home.js?v=20261014e"></script>
+</head>
+<body class="site">
+  <!-- Built from Figma SgmCvYIDNBZmMuQKduHgOQ, frame "Web laptop / Check a link (/check)" (3:120). -->
+  <header class="s-header">
+    <a href="/" class="s-header__logo" aria-label="Vigie home"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="/static/img/icons.svg#i-logo"></use></svg></a>
+    <nav class="s-nav" aria-label="Main">
+      <a href="/" class="s-nav__link">How it works</a>
+      <a href="/#where-vigie-works" class="s-nav__link">Downloads</a>
+      <a href="/check" class="s-nav__link">Book a demo</a>
+    </nav>
+    <a href="/check" class="s-btn s-btn--nav" aria-current="page">Check a link<svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-arrow"></use></svg></a>
+  </header>
+
+  <main>
+    <section class="s-hero s-checkhero" aria-labelledby="check-title">
+      <div class="s-hero__v" aria-hidden="true"><svg viewBox="0 0 32 32"><use href="/static/img/icons.svg#i-logo"></use></svg></div>
+      <div class="s-hero__intro">
+        <span class="s-pill"><svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg>Vigie on the web</span>
+        <h1 id="check-title" class="s-h1">Is this link<br><span class="s-h1__ai">safe</span> to open?</h1>
+        <p class="s-promise">Paste it here and Vigie’s AI checks it before it opens.</p>
+        <p class="s-problem">Free and anonymous, with no account and nothing to install.</p>
+        <a href="/" class="s-textlink s-textlink--blue">See how Vigie decides</a>
+      </div>
+
+      <div class="s-hero__media"><div class="s-hero__zone" aria-hidden="true"></div><form class="s-window s-form" id="check-form" novalidate>
+        <div class="s-form__head">
+          <svg class="s-icon s-icon--26 s-icon--blue" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg>
+          <h2 class="s-investigation__title">Investigate a link</h2>
+        </div>
+        <label class="s-form__label" for="link">Link to investigate</label>
+        <div class="s-field field">
+          <svg class="s-icon s-icon--22" aria-hidden="true"><use href="/static/img/icons.svg#i-link"></use></svg>
+          <input id="link" name="url" type="url" inputmode="url" autocomplete="off" autocapitalize="off"
+                 spellcheck="false" placeholder="Paste a link" aria-describedby="link-error">
+        </div>
+        <p class="s-field__error" id="link-error" role="alert" hidden></p>
+        <button class="s-btn s-btn--hero s-btn--block" type="submit">Check this link<svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-arrow"></use></svg></button>
+        <hr class="s-form__rule">
+        <div class="s-examples">
+          <p>Or try an example</p>
+          <a href="/go?url=https%3A%2F%2Fecobank.com"><svg class="s-icon s-icon--22" aria-hidden="true"><use href="/static/img/icons.svg#i-bank"></use></svg>A real bank website</a>
+          <a href="/go?url=https%3A%2F%2Ftestsafebrowsing.appspot.com%2Fs%2Fphishing.html"><svg class="s-icon s-icon--22" aria-hidden="true"><use href="/static/img/icons.svg#i-alert"></use></svg>Google’s test phishing page</a>
+          <a href="/example/fresh" rel="nofollow"><svg class="s-icon s-icon--22" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg>A live phishing link from today</a>
+        </div>
+      </form></div>
+    </section>
+
+    <section class="s-section s-rules s-next" aria-labelledby="next-title">
+      <div class="s-heading">
+        <h2 id="next-title" class="s-h2">What happens next</h2>
+        <p class="s-lead">Three steps, usually under ten seconds.</p>
+      </div>
+      <ol class="s-rails">
+        <li class="s-rail-item">
+          <span class="s-rail-item__num" aria-hidden="true">01</span>
+          <h3 class="s-rail-item__title">Paste a link</h3>
+          <p>Any link from a message, an email or a QR code.</p>
+        </li>
+        <li class="s-rail-item">
+          <span class="s-rail-item__num" aria-hidden="true">02</span>
+          <h3 class="s-rail-item__title">Watch the investigation</h3>
+          <p>Each check appears as it runs, while the page stays closed.</p>
+        </li>
+        <li class="s-rail-item">
+          <span class="s-rail-item__num" aria-hidden="true">03</span>
+          <h3 class="s-rail-item__title">Get a clear verdict</h3>
+          <p>Green opens it, and red keeps it closed with the reason.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="s-section s-navy s-where" aria-labelledby="where-title">
+      <img class="s-where__cut" src="/static/img/diagonal-cut.svg" alt="" aria-hidden="true">
+      <h2 id="where-title" class="s-h2">Where Vigie works</h2>
+      <div class="s-platforms">
+        <div class="s-platform">
+          <svg class="s-icon s-icon--26" aria-hidden="true"><use href="/static/img/icons.svg#i-browser"></use></svg>
+          <h3>On the web</h3>
+          <p>Paste a link, or open a link someone wrapped with Vigie, with nothing to install.</p>
+          <span>Available now</span>
+        </div>
+        <div class="s-platform">
+          <svg class="s-icon s-icon--26" aria-hidden="true"><use href="/static/img/icons.svg#i-desktop"></use></svg>
+          <h3>On Windows</h3>
+          <p>Every link clicked in WhatsApp, Outlook or a PDF reaches Vigie first, and safe links open in your usual browser.</p>
+          <span>Available now</span>
+        </div>
+        <div class="s-platform">
+          <svg class="s-icon s-icon--26" aria-hidden="true"><use href="/static/img/icons.svg#i-phone"></use></svg>
+          <h3>On Android</h3>
+          <p>Tapped links and links shared to Vigie from any app.</p>
+          <span>Next</span>
+        </div>
+      </div>
+      <div class="s-cta">
+        <a href="/#where-vigie-works" class="s-btn s-btn--white">Get Vigie for Windows<svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-arrow"></use></svg></a>
+        <a href="/" class="s-cta__link">See how Vigie decides</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="s-footnote">
+    <svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-eye"></use></svg>
+    <span>Vigie investigates and you stay in control.</span>
+    <a href="/privacy" class="s-footnote__link">Privacy</a>
+  </footer>
+</body>
+</html>

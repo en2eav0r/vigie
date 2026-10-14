@@ -1,0 +1,280 @@
+{
+ "name": "ecobank-fake",
+ "url": "https://ecobank-tg-verif.com/login",
+ "host": "ecobank-tg-verif.com",
+ "recorded_at": "2026-10-12T17:14+00:00",
+ "events": [
+  {
+   "t": 0.75,
+   "event": "step",
+   "data": {
+    "id": 1,
+    "tool": "signals",
+    "label": "Examining the address…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 0.75,
+   "event": "step",
+   "data": {
+    "id": 1,
+    "tool": "signals",
+    "label": "Address uses the name Ecobank outside its domain",
+    "status": "done"
+   }
+  },
+  {
+   "t": 0.75,
+   "event": "step",
+   "data": {
+    "id": 2,
+    "tool": "redirects",
+    "label": "Following redirects…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 0.75,
+   "event": "step",
+   "data": {
+    "id": 3,
+    "tool": "domain",
+    "label": "Checking the domain registration…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 0.75,
+   "event": "step",
+   "data": {
+    "id": 4,
+    "tool": "reputation",
+    "label": "Checking blocklists…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 0.75,
+   "event": "step",
+   "data": {
+    "id": 5,
+    "tool": "memory",
+    "label": "Checking Vigie's memory…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 0.75,
+   "event": "step",
+   "data": {
+    "id": 5,
+    "tool": "memory",
+    "label": "Not seen before by Vigie",
+    "status": "done"
+   }
+  },
+  {
+   "t": 0.81,
+   "event": "step",
+   "data": {
+    "id": 2,
+    "tool": "redirects",
+    "label": "The site did not answer",
+    "status": "done"
+   }
+  },
+  {
+   "t": 1.77,
+   "event": "step",
+   "data": {
+    "id": 4,
+    "tool": "reputation",
+    "label": "No blocklist reports this link",
+    "status": "done"
+   }
+  },
+  {
+   "t": 2.73,
+   "event": "step",
+   "data": {
+    "id": 3,
+    "tool": "domain",
+    "label": "Creation date not published",
+    "status": "done"
+   }
+  },
+  {
+   "t": 2.73,
+   "event": "step",
+   "data": {
+    "id": 6,
+    "tool": "urlscan",
+    "label": "Reading the page…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 2.73,
+   "event": "step",
+   "data": {
+    "id": 6,
+    "tool": "urlscan",
+    "label": "The page could not be read",
+    "status": "done"
+   }
+  },
+  {
+   "t": 2.73,
+   "event": "step",
+   "data": {
+    "id": 7,
+    "tool": "official_site",
+    "label": "Looking up the official Ecobank site…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 3.66,
+   "event": "step",
+   "data": {
+    "id": 7,
+    "tool": "official_site",
+    "label": "Official site found: ecobank.com",
+    "status": "done"
+   }
+  },
+  {
+   "t": 3.66,
+   "event": "step",
+   "data": {
+    "id": 8,
+    "tool": "compare",
+    "label": "Comparing the two domains…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 4.5,
+   "event": "step",
+   "data": {
+    "id": 8,
+    "tool": "compare",
+    "label": "Different domains",
+    "status": "done"
+   }
+  },
+  {
+   "t": 5.29,
+   "event": "step",
+   "data": {
+    "id": 9,
+    "tool": "agent",
+    "label": "The AI is weighing the evidence…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 7.09,
+   "event": "step",
+   "data": {
+    "id": 9,
+    "tool": "agent",
+    "label": "The AI has reached a verdict",
+    "status": "done"
+   }
+  },
+  {
+   "t": 7.09,
+   "event": "step",
+   "data": {
+    "id": 10,
+    "tool": "guardrails",
+    "label": "Applying Vigie's safety rules…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 7.09,
+   "event": "step",
+   "data": {
+    "id": 10,
+    "tool": "guardrails",
+    "label": "Safety rules passed",
+    "status": "done"
+   }
+  },
+  {
+   "t": 7.1,
+   "event": "verdict",
+   "data": {
+    "verdict": "blocked",
+    "threat_type": "impersonation",
+    "impersonated_brand": "Ecobank",
+    "official_domain": "ecobank.com",
+    "decisive_evidence": [
+     "Domain ecobank-tg-verif.com has no valid TLS certificate",
+     "Domain ecobank-tg-verif.com is not the official domain and is unrelated to ecobank.com",
+     "Domain ecobank.com is confirmed as the official site by two independent sources"
+    ],
+    "explanation": "This site pretends to be Ecobank. It was created recently and the real Ecobank site is ecobank.com.",
+    "url": "https://ecobank-tg-verif.com/login",
+    "host": "ecobank-tg-verif.com",
+    "destination": {
+     "name": "ecobank-tg-verif.com",
+     "host": "ecobank-tg-verif.com",
+     "final_url": "https://ecobank-tg-verif.com/login",
+     "verified_brand": false
+    },
+    "evidence": [
+     {
+      "icon": "link",
+      "title": "Redirects",
+      "detail": "The site did not answer"
+     },
+     {
+      "icon": "clock",
+      "title": "Domain registration",
+      "detail": "Registration date not published"
+     },
+     {
+      "icon": "scan",
+      "title": "Certificate",
+      "detail": "No valid certificate"
+     },
+     {
+      "icon": "bank",
+      "title": "Official website",
+      "detail": "ecobank.com"
+     },
+     {
+      "icon": "search",
+      "title": "Domain comparison",
+      "detail": "Different domains"
+     },
+     {
+      "icon": "alert",
+      "title": "Blocklists",
+      "detail": "Not reported (VirusTotal, Safe Browsing, URLhaus, OpenPhish)"
+     },
+     {
+      "icon": "scan",
+      "title": "Address",
+      "detail": "Uses the name Ecobank"
+     }
+    ],
+    "guardrails": [],
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "bill": {
+     "cost_usd": 0.000584,
+     "input_tokens": 965,
+     "cached_tokens": 0,
+     "output_tokens": 124,
+     "turns": 1
+    },
+    "seconds": 7.1
+   }
+  }
+ ]
+}

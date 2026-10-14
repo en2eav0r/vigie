@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f6fb">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Vigie’s AI checks every link before it opens, so fake and dangerous websites never reach you.">
+  <title>Vigie: AI that checks every link before it opens</title>
+  <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/static/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/static/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/site.css?v=20261014e">
+</head>
+<body class="site">
+  <!-- Built from Figma SgmCvYIDNBZmMuQKduHgOQ, frame "Web laptop / How it works" (67:598). -->
+  <header class="s-header">
+    <a href="/" class="s-header__logo" aria-label="Vigie home"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="/static/img/icons.svg#i-logo"></use></svg></a>
+    <nav class="s-nav" aria-label="Main">
+      <a href="/" class="s-nav__link is-current" aria-current="page">How it works<span class="s-nav__bar" aria-hidden="true"></span></a>
+      <a href="#where-vigie-works" class="s-nav__link">Downloads</a>
+      <a href="/check" class="s-nav__link">Book a demo</a>
+    </nav>
+    <a href="/check" class="s-btn s-btn--nav">Check a link<svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-arrow"></use></svg></a>
+  </header>
+
+  <main>
+    <!-- Hero (67:608) -->
+    <section class="s-hero" aria-labelledby="hero-title">
+      <div class="s-hero__v" aria-hidden="true"><svg viewBox="0 0 32 32"><use href="/static/img/icons.svg#i-logo"></use></svg></div>
+      <div class="s-hero__intro">
+        <span class="s-pill"><svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg>How Vigie decides</span>
+        <h1 id="hero-title" class="s-h1">Vigie’s <span class="s-h1__ai">AI</span> checks<br>every link<br>before it opens.</h1>
+        <p class="s-promise">Fake and dangerous websites never reach you.</p>
+        <p class="s-problem">A fake page can copy your bank or your mobile money account in minutes, long before any blocklist knows about it.</p>
+        <a href="/check" class="s-btn s-btn--hero">Check a link<svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-arrow"></use></svg></a>
+      </div>
+
+      <div class="s-hero__media"><div class="s-hero__zone" aria-hidden="true"></div><figure class="s-window" aria-label="Vigie for Windows investigating ecobank-tg-verif.com">
+        <div class="s-window__bar">
+          <svg class="s-window__logo" viewBox="0 0 32 32" aria-hidden="true"><use href="/static/img/icons.svg#i-logo"></use></svg>
+          <img class="s-window__controls" src="/static/img/window-controls.svg" width="76" height="12" alt="">
+        </div>
+        <div class="s-window__address">
+          <div class="s-address">
+            <svg class="s-icon s-icon--16 s-icon--blue" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg>
+            <span class="s-mono">ecobank-tg-verif.com</span>
+          </div>
+        </div>
+        <div class="s-window__body">
+          <div class="s-investigation__head">
+            <svg class="s-icon s-icon--26 s-icon--blue" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg>
+            <span class="s-investigation__title">Investigating…</span>
+          </div>
+          <p class="s-investigation__sub">Checking the link you just clicked.</p>
+          <div class="s-progress" aria-hidden="true"><span></span></div>
+          <ul class="s-checks">
+            <li><svg class="s-icon s-icon--18" aria-hidden="true"><use href="/static/img/icons.svg#i-check"></use></svg>Following redirects: none</li>
+            <li><svg class="s-icon s-icon--18" aria-hidden="true"><use href="/static/img/icons.svg#i-check"></use></svg>Domain registered 2 days ago</li>
+            <li><svg class="s-icon s-icon--18" aria-hidden="true"><use href="/static/img/icons.svg#i-check"></use></svg>Page claims to be Ecobank</li>
+            <li><svg class="s-icon s-icon--18" aria-hidden="true"><use href="/static/img/icons.svg#i-check"></use></svg>Official site found: ecobank.com</li>
+            <li><svg class="s-icon s-icon--18" aria-hidden="true"><use href="/static/img/icons.svg#i-check"></use></svg>Comparing the two domains</li>
+            <li class="is-active"><svg class="s-icon s-icon--18 s-pulse" aria-hidden="true"><use href="/static/img/icons.svg#i-clock"></use></svg>Checking the login form…</li>
+          </ul>
+        </div>
+      </figure></div>
+    </section>
+
+    <!-- From click to verdict (67:640) -->
+    <section class="s-section s-steps" aria-labelledby="steps-title">
+      <div class="s-heading">
+        <h2 id="steps-title" class="s-h2">From click to verdict</h2>
+        <p class="s-lead">Five stages, some running side by side, and most links get their verdict in under ten seconds.</p>
+      </div>
+      <div class="s-process">
+        <div class="s-rail" aria-hidden="true">
+          <span class="s-rail__line"></span>
+          <span class="s-rail__marker is-current s-rail__marker--1">01</span>
+          <span class="s-rail__marker s-rail__marker--2">02</span>
+          <span class="s-rail__marker s-rail__marker--3">03</span>
+          <span class="s-rail__marker s-rail__marker--4">04</span>
+          <span class="s-rail__marker s-rail__marker--5">05</span>
+        </div>
+        <ol class="s-decisions">
+          <li class="s-decision">
+            <h3 class="s-decision__title">Verdict memory</h3>
+            <p class="s-decision__body s-decision__body--wide">Vigie first checks whether this exact link already has a recent verdict.</p>
+            <p class="s-decision__time">About 1 second</p>
+          </li>
+          <li class="s-decision">
+            <h3 class="s-decision__title">Case file</h3>
+            <p class="s-decision__body">It records where the link leads and who the page claims to be.</p>
+            <p class="s-decision__time">2–8 seconds</p>
+          </li>
+          <li class="s-decision">
+            <h3 class="s-decision__title">Blocklists</h3>
+            <p class="s-decision__body">Known dangerous links stop here, before any page can open.</p>
+            <p class="s-decision__time">About 2 seconds</p>
+          </li>
+          <li class="s-decision">
+            <h3 class="s-decision__title">AI analyst</h3>
+            <p class="s-decision__body">The evidence is compared and the claimed identity is questioned.</p>
+            <p class="s-decision__time">About 5 seconds</p>
+          </li>
+          <li class="s-decision">
+            <h3 class="s-decision__title">Safety rules</h3>
+            <p class="s-decision__body">Fixed rules make the final call, and they can block a link but never open a risky one.</p>
+            <p class="s-decision__time">Final decision</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Outcomes (97:1520) -->
+    <section class="s-section s-outcomes" aria-labelledby="outcomes-title">
+      <div class="s-heading">
+        <h2 id="outcomes-title" class="s-h2">Three possible outcomes</h2>
+        <p class="s-lead s-lead--muted">What you see once the check is done, before anything opens.</p>
+      </div>
+      <div class="s-screens">
+        <article class="s-outcome">
+          <div class="s-mini">
+            <div class="s-mini__bar">
+              <svg class="s-mini__logo" viewBox="0 0 32 32" aria-hidden="true"><use href="/static/img/icons.svg#i-logo"></use></svg>
+              <img class="s-mini__controls" src="/static/img/window-controls-small.svg" width="52" height="9" alt="">
+            </div>
+            <div class="s-mini__address"><div class="s-mini__field"><svg class="s-icon s-icon--13 s-icon--blue" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg><span class="s-mono">ecobank.com</span></div></div>
+            <div class="s-mini__screen is-green">
+              <svg class="s-icon s-icon--30" aria-hidden="true"><use href="/static/img/icons.svg#i-check"></use></svg>
+              <p class="s-mini__title">This link is safe</p>
+              <p class="s-mini__text">Opening in Chrome in 5 seconds.</p>
+            </div>
+          </div>
+          <div class="s-caption"><h3>Safe</h3><p>Opens in your usual browser after 5 seconds.</p></div>
+        </article>
+        <article class="s-outcome">
+          <div class="s-mini">
+            <div class="s-mini__bar">
+              <svg class="s-mini__logo" viewBox="0 0 32 32" aria-hidden="true"><use href="/static/img/icons.svg#i-logo"></use></svg>
+              <img class="s-mini__controls" src="/static/img/window-controls-small.svg" width="52" height="9" alt="">
+            </div>
+            <div class="s-mini__address"><div class="s-mini__field"><svg class="s-icon s-icon--13 s-icon--blue" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg><span class="s-mono">ecobank-tg-verif.com</span></div></div>
+            <div class="s-mini__screen is-red">
+              <svg class="s-icon s-icon--30" aria-hidden="true"><use href="/static/img/icons.svg#i-stop"></use></svg>
+              <p class="s-mini__title">Unable to open this page</p>
+              <p class="s-mini__text">This site pretends to be Ecobank and was created 2 days ago.</p>
+            </div>
+          </div>
+          <div class="s-caption"><h3>Blocked</h3><p>The reason is shown and no button opens the page.</p></div>
+        </article>
+        <article class="s-outcome">
+          <div class="s-mini">
+            <div class="s-mini__bar">
+              <svg class="s-mini__logo" viewBox="0 0 32 32" aria-hidden="true"><use href="/static/img/icons.svg#i-logo"></use></svg>
+              <img class="s-mini__controls" src="/static/img/window-controls-small.svg" width="52" height="9" alt="">
+            </div>
+            <div class="s-mini__address"><div class="s-mini__field"><svg class="s-icon s-icon--13 s-icon--blue" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg><span class="s-mono">bonus-momo-tg.com</span></div></div>
+            <div class="s-mini__screen is-red">
+              <svg class="s-icon s-icon--30" aria-hidden="true"><use href="/static/img/icons.svg#i-alert"></use></svg>
+              <p class="s-mini__title">Verification impossible</p>
+              <p class="s-mini__text">Vigie could not finish checking this link, so it stays closed.</p>
+            </div>
+          </div>
+          <div class="s-caption"><h3>Unverifiable</h3><p>When the checks cannot finish, the link stays closed.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Real or fake? (67:670) -->
+    <section class="s-section s-navy s-compare" aria-labelledby="compare-title">
+      <div class="s-heading">
+        <h2 id="compare-title" class="s-h2">Real or fake?</h2>
+        <p class="s-lead s-lead--wide">Blocklists only know a fake site after someone reports it, so Vigie asks a question that works on a site created this morning: which company does this page claim to be, and is this really that company's website?</p>
+      </div>
+      <div class="s-compare__card">
+        <table class="s-table">
+          <thead>
+            <tr>
+              <td></td>
+              <th scope="col"><span class="s-table__address s-mono">ecobank-tg-verif.com</span></th>
+              <th scope="col"><span class="s-table__address s-mono">ecobank.com</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Claims to be</th><td>Ecobank</td><td>Ecobank</td></tr>
+            <tr><th scope="row">Domain created</th><td class="s-mono">2 days ago</td><td class="s-mono">1998, 28 years ago</td></tr>
+            <tr><th scope="row">Ecobank's official site</th><td>No</td><td>Yes, confirmed by two sources</td></tr>
+            <tr><th scope="row">Page asks for</th><td>Password and account number</td><td>No login form</td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Verdict</th>
+              <td><span class="s-verdict is-red">Blocked</span></td>
+              <td><span class="s-verdict is-green">Safe</span></td>
+            </tr>
+          </tfoot>
+        </table>
+        <p class="s-compare__note">Illustrative example.</p>
+      </div>
+    </section>
+
+    <!-- Rules that hold (67:762) -->
+    <section class="s-section s-rules" aria-labelledby="rules-title">
+      <div class="s-heading">
+        <h2 id="rules-title" class="s-h2">Rules that hold</h2>
+        <p class="s-lead">Six fixed protections remain active, even when the AI is uncertain.</p>
+      </div>
+      <div class="s-protection">
+        <div class="s-protection__summary">
+          <span class="s-protection__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><use href="/static/img/icons.svg#i-logo"></use></svg></span>
+          <div class="s-protection__copy">
+            <h3>Protection always on</h3>
+            <p>Three protections keep the final decision under control.</p>
+          </div>
+        </div>
+        <ol class="s-rails">
+          <li class="s-rail-item">
+            <span class="s-rail-item__num" aria-hidden="true">01</span>
+            <h4>Threats stay blocked</h4>
+            <p>Known dangerous links never open, and unclear evidence keeps the link closed.</p>
+          </li>
+          <li class="s-rail-item">
+            <span class="s-rail-item__num" aria-hidden="true">02</span>
+            <h4>Evidence stays trustworthy</h4>
+            <p>Page content is read as evidence, never as instructions, and an official site needs two sources.</p>
+          </li>
+          <li class="s-rail-item">
+            <span class="s-rail-item__num" aria-hidden="true">03</span>
+            <h4>You stay in control</h4>
+            <p>Warning screens cannot open links, and private access links stay on your device.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Where Vigie works (67:827) -->
+    <section class="s-section s-navy s-where" id="where-vigie-works" aria-labelledby="where-title">
+      <img class="s-where__cut" src="/static/img/diagonal-cut.svg" alt="" aria-hidden="true">
+      <h2 id="where-title" class="s-h2">Where Vigie works</h2>
+      <div class="s-platforms">
+        <div class="s-platform">
+          <svg class="s-icon s-icon--26" aria-hidden="true"><use href="/static/img/icons.svg#i-browser"></use></svg>
+          <h3>On the web</h3>
+          <p>Paste a link, or open a link someone wrapped with Vigie, with nothing to install.</p>
+          <span>Available now</span>
+        </div>
+        <div class="s-platform">
+          <svg class="s-icon s-icon--26" aria-hidden="true"><use href="/static/img/icons.svg#i-desktop"></use></svg>
+          <h3>On Windows</h3>
+          <p>Every link clicked in WhatsApp, Outlook or a PDF reaches Vigie first, and safe links open in your usual browser.</p>
+          <span>Available now</span>
+        </div>
+        <div class="s-platform">
+          <svg class="s-icon s-icon--26" aria-hidden="true"><use href="/static/img/icons.svg#i-phone"></use></svg>
+          <h3>On Android</h3>
+          <p>Tapped links and links shared to Vigie from any app.</p>
+          <span>Next</span>
+        </div>
+      </div>
+      <div class="s-cta">
+        <a href="/check" class="s-btn s-btn--white">Check a link<svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-arrow"></use></svg></a>
+        <a href="/privacy" class="s-cta__link">Read how Vigie protects your privacy</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footnote (67:866) -->
+  <footer class="s-footnote">
+    <svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-eye"></use></svg>
+    <span>Vigie investigates and you stay in control.</span>
+  </footer>
+</body>
+</html>

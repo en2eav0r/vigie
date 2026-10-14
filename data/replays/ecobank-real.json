@@ -1,0 +1,266 @@
+{
+ "name": "ecobank-real",
+ "url": "https://ecobank.com/",
+ "host": "ecobank.com",
+ "recorded_at": "2026-10-12T17:14+00:00",
+ "events": [
+  {
+   "t": 1.32,
+   "event": "step",
+   "data": {
+    "id": 1,
+    "tool": "signals",
+    "label": "Examining the address…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 1.32,
+   "event": "step",
+   "data": {
+    "id": 1,
+    "tool": "signals",
+    "label": "No suspicious pattern in the address",
+    "status": "done"
+   }
+  },
+  {
+   "t": 1.32,
+   "event": "step",
+   "data": {
+    "id": 2,
+    "tool": "redirects",
+    "label": "Following redirects…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 1.32,
+   "event": "step",
+   "data": {
+    "id": 3,
+    "tool": "domain",
+    "label": "Checking the domain registration…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 1.32,
+   "event": "step",
+   "data": {
+    "id": 4,
+    "tool": "reputation",
+    "label": "Checking blocklists…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 1.32,
+   "event": "step",
+   "data": {
+    "id": 5,
+    "tool": "memory",
+    "label": "Checking Vigie's memory…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 1.32,
+   "event": "step",
+   "data": {
+    "id": 5,
+    "tool": "memory",
+    "label": "Not seen before by Vigie",
+    "status": "done"
+   }
+  },
+  {
+   "t": 2.14,
+   "event": "step",
+   "data": {
+    "id": 4,
+    "tool": "reputation",
+    "label": "No blocklist reports this link",
+    "status": "done"
+   }
+  },
+  {
+   "t": 2.4,
+   "event": "step",
+   "data": {
+    "id": 3,
+    "tool": "domain",
+    "label": "Domain registered 28 years ago",
+    "status": "done"
+   }
+  },
+  {
+   "t": 3.26,
+   "event": "step",
+   "data": {
+    "id": 2,
+    "tool": "redirects",
+    "label": "Following redirects: 2 to ecobank.com",
+    "status": "done"
+   }
+  },
+  {
+   "t": 3.26,
+   "event": "step",
+   "data": {
+    "id": 6,
+    "tool": "urlscan",
+    "label": "Reading the page…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 3.26,
+   "event": "step",
+   "data": {
+    "id": 6,
+    "tool": "urlscan",
+    "label": "Page claims to be Ecobank",
+    "status": "done"
+   }
+  },
+  {
+   "t": 3.26,
+   "event": "step",
+   "data": {
+    "id": 7,
+    "tool": "official_site",
+    "label": "Looking up the official Ecobank site…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 4.36,
+   "event": "step",
+   "data": {
+    "id": 7,
+    "tool": "official_site",
+    "label": "Official site found: ecobank.com",
+    "status": "done"
+   }
+  },
+  {
+   "t": 5.05,
+   "event": "step",
+   "data": {
+    "id": 8,
+    "tool": "agent",
+    "label": "The AI is weighing the evidence…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 7.18,
+   "event": "step",
+   "data": {
+    "id": 8,
+    "tool": "agent",
+    "label": "The AI has reached a verdict",
+    "status": "done"
+   }
+  },
+  {
+   "t": 7.18,
+   "event": "step",
+   "data": {
+    "id": 9,
+    "tool": "guardrails",
+    "label": "Applying Vigie's safety rules…",
+    "status": "running"
+   }
+  },
+  {
+   "t": 7.18,
+   "event": "step",
+   "data": {
+    "id": 9,
+    "tool": "guardrails",
+    "label": "Safety rules passed",
+    "status": "done"
+   }
+  },
+  {
+   "t": 7.18,
+   "event": "verdict",
+   "data": {
+    "verdict": "safe",
+    "threat_type": "none",
+    "impersonated_brand": "Ecobank",
+    "official_domain": "ecobank.com",
+    "decisive_evidence": [
+     "Domain ecobank.com is 10500 days old",
+     "Ecobank's official domain is ecobank.com confirmed by two sources",
+     "No suspicious redirects or blocklist flags",
+     "Page does not ask for sensitive information"
+    ],
+    "explanation": "This is Ecobank's official website. Its domain has belonged to the bank for 10500 days.",
+    "url": "https://ecobank.com/",
+    "host": "ecobank.com",
+    "destination": {
+     "name": "Ecobank",
+     "host": "ecobank.com",
+     "final_url": "https://ecobank.com/personal-banking",
+     "verified_brand": true
+    },
+    "evidence": [
+     {
+      "icon": "link",
+      "title": "Redirects",
+      "detail": "2 redirects, lands on ecobank.com"
+     },
+     {
+      "icon": "clock",
+      "title": "Domain registration",
+      "detail": "Registered 28 years ago, registrar Network Solutions, LLC"
+     },
+     {
+      "icon": "scan",
+      "title": "Certificate",
+      "detail": "Issued by Sectigo Limited"
+     },
+     {
+      "icon": "eye",
+      "title": "Claimed identity",
+      "detail": "Ecobank"
+     },
+     {
+      "icon": "bank",
+      "title": "Official website",
+      "detail": "ecobank.com"
+     },
+     {
+      "icon": "file",
+      "title": "Login form",
+      "detail": "No login form"
+     },
+     {
+      "icon": "alert",
+      "title": "Blocklists",
+      "detail": "Not reported (VirusTotal, Safe Browsing, URLhaus, OpenPhish)"
+     },
+     {
+      "icon": "scan",
+      "title": "Address",
+      "detail": "No suspicious pattern"
+     }
+    ],
+    "guardrails": [],
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "bill": {
+     "cost_usd": 0.000567,
+     "input_tokens": 977,
+     "cached_tokens": 0,
+     "output_tokens": 110,
+     "turns": 1
+    },
+    "seconds": 7.2
+   }
+  }
+ ]
+}

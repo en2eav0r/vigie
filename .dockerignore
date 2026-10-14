@@ -1,0 +1,9 @@
+.env
+.git
+data/*
+!data/replays
+desktop
+tests
+scripts
+**/__pycache__
+*.log

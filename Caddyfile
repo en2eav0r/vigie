@@ -1,0 +1,15 @@
+# HTTPS in front of Vigie. VIGIE_PUBLIC_HOST is the public name (a real domain, or <ip-with-dashes>.sslip.io).
+# Port 80 is only used to obtain and renew the Let's Encrypt certificate.
+{
+	https_port {$VIGIE_HTTPS_PORT:443}
+	admin off
+}
+
+{$VIGIE_PUBLIC_HOST} {
+	encode gzip
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+	reverse_proxy vigie:8740
+}

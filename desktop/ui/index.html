@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vigie</title>
+  <link rel="stylesheet" href="static/css/site.css">
+  <link rel="stylesheet" href="desktop.css">
+  <script type="module" src="desktop.js"></script>
+</head>
+<body class="site s-app in-app">
+  <!-- Vigie Desktop: the window chrome of the Figma "Hero / Vigie Desktop window", with the site's journey screens below. -->
+  <header class="d-chrome">
+    <div class="d-top pywebview-drag-region">
+      <svg class="d-logo" viewBox="0 0 32 32" aria-label="Vigie"><use href="/static/img/icons.svg#i-logo"></use></svg>
+      <div class="d-controls">
+        <button type="button" data-win="minimize" aria-label="Minimize"><svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-win-min"></use></svg></button>
+        <button type="button" data-win="toggle_maximize" aria-label="Maximize or restore"><svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-win-max"></use></svg></button>
+        <button type="button" data-win="close" aria-label="Close" class="is-close"><svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-win-close"></use></svg></button>
+      </div>
+    </div>
+    <div class="d-bar">
+      <button type="button" class="d-btn" id="back" aria-label="Back to Vigie's home"><svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-back"></use></svg></button>
+      <form class="d-address" id="address" autocomplete="off">
+        <svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-scan"></use></svg>
+        <label class="d-sr" for="address-input">Paste a link to check</label>
+        <input id="address-input" type="text" inputmode="url" spellcheck="false" placeholder="Paste a link to check">
+      </form>
+      <button type="button" class="d-btn" id="menu-button" aria-label="Menu" aria-haspopup="menu" aria-expanded="false"><svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-menu"></use></svg></button>
+      <div class="d-menu" id="menu" role="menu" hidden>
+        <button type="button" role="menuitem" data-go="home">Check a link</button>
+        <button type="button" role="menuitem" data-go="settings">Settings</button>
+        <button type="button" role="menuitem" data-go="about">About Vigie</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="stage" class="s-stage"></main>
+
+  <footer class="s-footnote s-app__foot">
+    <svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-eye"></use></svg>
+    <span id="footnote-text">Vigie investigates and you stay in control.</span>
+  </footer>
+</body>
+</html>

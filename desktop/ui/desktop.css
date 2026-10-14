@@ -1,0 +1,94 @@
+/* Vigie Desktop: window chrome on top of the site styles (site.css). Same fonts, colours and shapes as the site. */
+
+html, body.in-app { height: 100%; }
+body.in-app { padding-top: 0; overflow: hidden; }
+body.in-app .s-stage { justify-content: safe center; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+body.is-red.in-app .s-stage, body.is-green.in-app .s-stage { scrollbar-color: rgba(255, 255, 255, 0.35) transparent; }
+
+/* Window chrome: title bar, then the address row (Figma: Hero / Vigie Desktop window) */
+.d-chrome { position: relative; z-index: 10; flex: none; background: var(--white); border-bottom: 1px solid var(--border); box-shadow: 0 6px 12px -6px rgba(12, 39, 73, 0.12); }
+.d-top { display: flex; align-items: center; justify-content: space-between; height: 44px; padding: 0 8px 0 18px; }
+.d-logo { width: 20px; height: 20px; color: var(--blue); }
+.d-controls { display: flex; gap: 4px; }
+.d-controls button {
+  width: 44px; height: 32px; display: flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer;
+}
+.d-controls button:hover { background: var(--soft); color: var(--ink); }
+.d-controls button.is-close:hover { background: var(--red); color: var(--white); }
+.d-bar { position: relative; display: flex; align-items: center; gap: 12px; padding: 2px 16px 14px; }
+.d-btn {
+  width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 10px; background: transparent; color: var(--muted); cursor: pointer;
+}
+.d-btn:hover { background: var(--soft); color: var(--ink); }
+.d-address {
+  flex: 1; min-width: 0; height: 44px; display: flex; align-items: center; gap: 10px; padding: 0 14px;
+  border: 1px solid var(--border); border-radius: 10px; background: var(--white); color: var(--blue);
+}
+.d-address input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; font: 500 14px/1.45 var(--mono); color: var(--ink); }
+.d-address input::placeholder { font-family: var(--sans); color: var(--muted); }
+.d-address:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(18, 59, 112, 0.14); }
+.d-address.is-busy .s-icon { animation: s-pulse 1.6s ease-in-out infinite; }
+.d-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.d-menu {
+  position: absolute; right: 16px; top: 52px; min-width: 210px; padding: 6px;
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+  display: flex; flex-direction: column; box-shadow: 0 16px 32px -12px rgba(12, 39, 73, 0.24);
+}
+.d-menu[hidden] { display: none; }
+.d-menu button { text-align: left; padding: 10px 12px; border: 0; border-radius: 8px; background: transparent; font: 500 14px/1.45 var(--sans); color: var(--ink); cursor: pointer; }
+.d-menu button:hover, .d-menu button:focus-visible { background: var(--soft); }
+
+/* The app has its own chrome, so the journey screens start right under it */
+body.in-app .s-stage .s-hero { padding-top: calc(var(--zone-out) + clamp(16px, 3vh, 40px)); }
+
+/* Home: default-browser setup */
+.d-status { display: flex; align-items: center; gap: 10px; font: 500 15px/1.45 var(--sans); color: var(--ink); }
+.d-status .s-icon { color: var(--green); }
+.d-status.is-warning, .d-status.is-warning .s-icon { color: var(--red); }
+.d-steps { display: flex; flex-direction: column; gap: 12px; }
+.d-steps[hidden] { display: none; }
+.d-steps li { display: flex; align-items: flex-start; gap: 12px; font: 500 15px/1.5 var(--sans); color: var(--ink); }
+.d-steps li span:first-child {
+  flex: none; width: 28px; height: 28px; border-radius: 15px; display: flex; align-items: center; justify-content: center;
+  background: var(--navy-marker); color: var(--white); font: 500 12px/1 var(--mono);
+}
+.d-steps b { font-weight: 600; }
+.d-hint { font: 500 13px/1.45 var(--sans); color: var(--muted); }
+.d-hint.is-error { color: var(--red); }
+.d-hint.is-ok { color: var(--green); }
+
+/* Settings card */
+.d-settings { display: flex; flex-direction: column; gap: 0; padding: 8px 28px; }
+.d-setting { display: flex; flex-direction: column; gap: 10px; padding: 20px 0; border-bottom: 1px solid var(--soft); }
+.d-setting:last-child { border-bottom: 0; }
+.d-setting > p:first-child { font: 600 15px/1.45 var(--sans); color: var(--ink); }
+.d-setting__row { display: flex; align-items: center; justify-content: space-between; gap: 16px; font: 500 14px/1.45 var(--sans); color: var(--text-2); }
+.d-setting form { display: flex; gap: 10px; }
+.d-setting .s-field { flex: 1; height: 48px; }
+.d-ghost {
+  flex: none; height: 40px; padding: 0 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--white);
+  font: 500 14px/1 var(--sans); color: var(--blue); cursor: pointer;
+}
+.d-ghost:hover { border-color: var(--blue); }
+.d-save { height: 48px; padding: 0 20px; }
+
+/* Browser chooser on the green screen */
+.s-chooser { align-self: stretch; padding: 18px 20px; border-radius: 14px; background: var(--white); color: var(--ink); }
+.s-chooser[hidden] { display: none; }
+.s-chooser p { font: 600 15px/1.45 var(--sans); margin-bottom: 6px; }
+.s-chooser ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-bottom: 12px; }
+.s-chooser li button {
+  width: 100%; display: flex; align-items: center; gap: 10px; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: 10px; background: var(--white); cursor: pointer;
+  font: 500 14px/1.4 var(--sans); color: var(--ink); text-align: left;
+}
+.s-chooser li button:hover { border-color: var(--green); color: var(--green); }
+.s-chooser li button .s-icon { color: var(--blue); }
+.s-chooser label { display: flex; align-items: center; gap: 8px; font: 500 14px/1.45 var(--sans); color: var(--text-2); cursor: pointer; }
+.s-chooser input { width: 16px; height: 16px; accent-color: var(--green); }
+.s-chooser .d-hint { margin-top: 8px; }
+
+/* The decorative V must not make the app scroll */
+body.in-app .s-stage .s-hero__v { top: 0; bottom: 0; height: auto; }

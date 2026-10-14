@@ -1,0 +1,15 @@
+.env
+data/*
+!data/replays/
+__pycache__/
+*.pyc
+.pytest_cache/
+desktop/build/
+desktop/dist/
+desktop/ui/static/
+*.log
+desktop/assets/icon-preview.png
+desktop/vigie_desktop/_build.py
+
+# Private: jury preparation, never published
+docs/PROJECT_MANUAL.md

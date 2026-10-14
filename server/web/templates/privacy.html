@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f6fb">
+  <meta name="referrer" content="no-referrer">
+  <title>Vigie: privacy</title>
+  <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/static/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/static/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/css/site.css?v=20261014e">
+</head>
+<body class="site">
+  <header class="s-header">
+    <a href="/" class="s-header__logo" aria-label="Vigie home"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="/static/img/icons.svg#i-logo"></use></svg></a>
+    <nav class="s-nav" aria-label="Main">
+      <a href="/" class="s-nav__link">How it works</a>
+      <a href="/#where-vigie-works" class="s-nav__link">Downloads</a>
+      <a href="/check" class="s-nav__link">Book a demo</a>
+    </nav>
+    <a href="/check" class="s-btn s-btn--nav">Check a link<svg class="s-icon s-icon--20" aria-hidden="true"><use href="/static/img/icons.svg#i-arrow"></use></svg></a>
+  </header>
+
+  <main>
+    <section class="s-hero s-privacy" aria-labelledby="privacy-title">
+      <div class="s-hero__v" aria-hidden="true"><svg viewBox="0 0 32 32"><use href="/static/img/icons.svg#i-logo"></use></svg></div>
+      <div class="s-hero__intro">
+        <span class="s-pill"><svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-eye"></use></svg>Privacy</span>
+        <h1 id="privacy-title" class="s-h1">Your links<br><span class="s-h1__ai">stay</span> yours.</h1>
+        <p class="s-promise">No account and no tracking.</p>
+        <p class="s-problem">Vigie keeps as little as it can to protect you.</p>
+      </div>
+    </section>
+
+    <section class="s-section s-rules s-privacy__rules" aria-label="What Vigie keeps">
+      <ol class="s-rails s-rails--two">
+        <li class="s-rail-item">
+          <span class="s-rail-item__num" aria-hidden="true">01</span>
+          <h2 class="s-rail-item__title">What Vigie keeps</h2>
+          <p>The domain, the link without its parameters, the verdict and the date, with verdicts expiring after 24 hours and investigation logs deleted after 30 days.</p>
+        </li>
+        <li class="s-rail-item">
+          <span class="s-rail-item__num" aria-hidden="true">02</span>
+          <h2 class="s-rail-item__title">What Vigie never keeps</h2>
+          <p>Your identity, your IP address in clear or the app the link came from, since each install only gets an anonymous token for the free daily quota.</p>
+        </li>
+        <li class="s-rail-item">
+          <span class="s-rail-item__num" aria-hidden="true">03</span>
+          <h2 class="s-rail-item__title">Private links</h2>
+          <p>Links that carry a token, such as password reset links, are never opened or sent to VirusTotal or urlscan.io.</p>
+        </li>
+        <li class="s-rail-item">
+          <span class="s-rail-item__num" aria-hidden="true">04</span>
+          <h2 class="s-rail-item__title">The AI model</h2>
+          <p>The link and the text of the checked page are sent to the AI provider (OpenAI, or Google as a backup) for the analysis, with nothing that identifies you.</p>
+        </li>
+        <li class="s-rail-item">
+          <span class="s-rail-item__num" aria-hidden="true">05</span>
+          <h2 class="s-rail-item__title">Your own AI key</h2>
+          <p>If you add one in Vigie for Windows, it stays in your device’s protected storage and is used in memory for each check, never written on the server.</p>
+        </li>
+      </ol>
+      <p class="s-lead s-privacy__law">Vigie is built in Togo and follows Togo’s personal data law (Loi n° 2019-014).</p>
+    </section>
+  </main>
+
+  <footer class="s-footnote s-footnote--band">
+    <svg class="s-icon s-icon--16" aria-hidden="true"><use href="/static/img/icons.svg#i-eye"></use></svg>
+    <span>Vigie investigates and you stay in control.</span>
+  </footer>
+</body>
+</html>
