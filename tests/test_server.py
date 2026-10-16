@@ -211,3 +211,17 @@ def test_full_journey_with_test_agent(monkeypatch):
     assert fake[-1][1]["verdict"] == "blocked"
     again = _events(client.post("/investigate", json={"url": "https://ecobank.com"}, headers={"X-Vigie-Token": token}))
     assert again[-1][1]["from_memory"] is True                  # S03: verdict memory
+
+
+def test_sign_in_with_buttons_are_not_a_claimed_identity():
+    from server.tools.urlscan import analyse_html
+    # A startup's own login page that offers Google and Microsoft accounts.
+    own = ("<title>Aconta</title><form><input name='email'><input type='password' name='password'></form>"
+           "<button><img alt='Google'>Continue with Google</button><button>Se connecter avec Microsoft</button>")
+    page = analyse_html(own, "https://app.aconta.io/login")
+    assert page["brands_mentioned"] == []
+    assert page["sign_in_with"] == ["Google", "Microsoft"]
+    # A fake Google login page still names Google outside any button.
+    fake = ("<title>Sign in</title><img alt='Google'><p>Sign in to continue to Gmail. Use your Google Account.</p>"
+            "<form><input name='email'><input type='password' name='password'></form>")
+    assert "Google" in analyse_html(fake, "https://accounts-google.top/")["brands_mentioned"]

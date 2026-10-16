@@ -188,6 +188,7 @@ def compact(ctx: ToolContext) -> dict:
             "source": page.get("source"),
             "title": page.get("title"),
             "brands_mentioned": page.get("brands_mentioned"),
+            "sign_in_with_buttons": page.get("sign_in_with") or None,
             "asks_for": _flags(page, ("asks_for_login", "asks_for_card", "asks_for_pin_or_otp",
                                       "asks_for_mobile_money")),
             "form_sends_to": [t for t in page.get("form_targets", []) if t and t != link.host],
